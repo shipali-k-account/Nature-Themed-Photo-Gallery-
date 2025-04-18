@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.main_box{
+    position: relative;
+    background: url('images/cloud7.jpg') right no-repeat;
+    background-size: cover;
+    
+    height:100vh;
+    width: 100%;
+}
+.main_box h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(14, 16, 17);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+   
+    
+    border-radius: 10px;
+    width: 60%;
+}
+.main_box .sidebar_menu{
+    position: fixed;
+    left: -280px;
+    height: 100vh;
+    width: 280px;
+    
+    background: rgba(2, 8, 14, 0.1);
+   
+    box-shadow: 0 0 10px rgba(22, 90, 193, 0.5);
+    
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    height:60px;
+    box-shadow: 0 0 6px rgba(255,255,255,0.5);
+
+}
+.sidebar_menu .logo a{
+    color:rgb(10, 12, 11);
+    font-size: 25px;
+    font-weight:bolder;
+    position: absolute;
+    left: 50px;
+    line-height: 60px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    gap: 385px;
+    
+   
+}
+.sidebar_menu .menu li{
+     margin-top: 6px;
+    padding: 16px 20px;
+    transition: all 0.3s linear;
+    margin-bottom: 28px;
+
+
+}
+.sidebar_menu .menu i{
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 8px;
+   
+}
+.sidebar_menu .menu a{
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+    border-left: 1px solid #fff;
+    box-shadow: 0 0 4px rgba(255,255,255,0.5);
+}
+.sidebar_menu .social_media{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    gap: 15px;
+}
+.social_media i{
+    padding:8px;
+    color: #FFF;
+    opacity: 0.6;
+    font-size: 26px;
+    transition: all 0.3s linear;
+    
+}
+.social_media i:hover{
+  opacity: 1;  
+  
+}
+#check{
+    display: none;
+
+}
+.main_box .btn_one i{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .btn_two i{
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left: 240px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s linear;
+
+}
+.btn_one i:hover{
+    font-size: 29px;
+}
+.btn_two i:hover{
+    font-size: 24px;
+}
+#check:checked ~.sidebar_menu{
+    left:0px;
+
+}
+#check:checked ~ .btn_one i{
+    opacity: 0;
+
+}
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+.gallery {
+    padding: 20px;
+    text-align: center;
+    background: #f0f0f0;
+    min-height: 100vh;
+}
+
+.category {
+    display: none;
+    padding: 10px;
+    background: rgb(206, 231, 244);
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.category h2 {
+    color: #444;
+    font-weight: bold;
+    font-size:45px;
+    margin-bottom: 15px;
+}
+
+.category img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin: 15px;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+:target {
+    display: block;
+}
